@@ -31,7 +31,7 @@ public class SegmentServiceImpl implements LeafService {
     @Autowired
     private IDAllocMapper idAllocMapper;
 
-    private ConcurrentMap<String, SegmentBuffer> cache = new ConcurrentHashMap<>();
+    private static ConcurrentMap<String, SegmentBuffer> cache = new ConcurrentHashMap<>();
 
     private volatile boolean initialized;
 
